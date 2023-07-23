@@ -1,0 +1,23 @@
+.swiper-buttons {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  z-index: 5;
+  scale: 1.06;
+
+  button {
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    opacity: 0.9;
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  img {
+    height: auto;
+    width: 50px;
+  }
+}

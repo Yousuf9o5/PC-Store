@@ -1,0 +1,32 @@
+/* ########## variables ########## */
+@import "./variables";
+
+/* ########## App ########## */
+@import "../../css/App";
+
+/* ########## Navbar ########## */
+@import "../../components/Navbar/navbar";
+
+/* ########## Footer ########## */
+@import "../../components/Footer/footer";
+
+/* ########## Home Header ########## */
+@import "../../components/HomeHeader/homeHeader";
+
+/* ########## New Items ########## */
+@import "../../components/NewItems/newItems";
+
+/* ########## Navigation Buttons (swiper) ########## */
+@import "../../components/NavigationButtons/navigationButtons";
+
+/* ########## Card ########## */
+@import "../../components/Card/card";
+
+/* ########## Section Header ########## */
+@import "../../components/SectionHeader/sectionHeader";
+
+/* ########## Keyboard Showcase ########## */
+@import "../../components/KeyboardShowcase/keyboardShowcase";
+
+/* ########## Product Type ########## */
+@import "../../components/ProductsTypes/productType";

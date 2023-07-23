@@ -1,0 +1,20 @@
+:root {
+  overflow-x: hidden;
+}
+
+#root {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease-in-out, color ease-in-out;
+}
+
+.App {
+  width: 100dvw;
+  min-height: 100dvh;
+  background: var(--color-light-gray);
+}

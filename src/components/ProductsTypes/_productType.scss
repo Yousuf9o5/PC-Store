@@ -1,0 +1,75 @@
+.product-type {
+  padding: 2.1 0rem;
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    justify-self: center;
+  }
+
+  &__card:hover img {
+    scale: 1.1;
+  }
+
+  img {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .card-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  button {
+    width: 200px;
+    padding: 1rem 0rem;
+    color: white;
+    font-size: var(--font-medium);
+    border: 2px solid white;
+    z-index: 3;
+    background: transparent;
+    border-radius: 10px;
+
+    &:hover {
+      background: white;
+      color: var(--color-dark);
+    }
+  }
+}
+
+@media (max-width: 441px) {
+  .product-type {
+    .row {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0rem;
+    }
+
+    &__card {
+      scale: 0.9;
+    }
+  }
+}

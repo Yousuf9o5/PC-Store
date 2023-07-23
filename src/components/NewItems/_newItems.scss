@@ -1,0 +1,32 @@
+.new-items {
+  padding: 2.1rem 2.3rem;
+  padding-top: 0;
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-pagination {
+    top: 100% !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--color-primary);
+  }
+
+  .section-header {
+    gap: 2vw;
+  }
+
+  .section-header .line {
+    width: 30%;
+  }
+}
+
+@media (max-width: 441px) {
+  .new-items {
+    .section-header h1 {
+      width: 250px;
+    }
+  }
+}
