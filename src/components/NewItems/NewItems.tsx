@@ -35,7 +35,7 @@ function NewItems() {
   };
 
   return (
-    <div className="new-items container my-5 position-relative overflow-hidden">
+    <section className="new-items container my-5 position-relative overflow-hidden">
       <SectionHeader title={"New Coming"} />
 
       <Swiper
@@ -78,7 +78,7 @@ function NewItems() {
         </SwiperSlide>
         {scrWidth > 500 ? <NavigationButtons /> : <></>}
       </Swiper>
-    </div>
+    </section>
   );
 }
 

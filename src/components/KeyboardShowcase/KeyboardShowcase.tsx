@@ -3,7 +3,7 @@ import keyboardImg from "../../assets/imgs/colorful keyboard.png";
 
 function KeyboardShowcase() {
   return (
-    <div className="keyboard-showcase container-fluid my-5">
+    <section className="keyboard-showcase container-fluid my-5">
       <div className="row">
         <div className="col-lg-6">
           <h1>Fully Customizable Mechanical keyboards</h1>
@@ -16,7 +16,7 @@ function KeyboardShowcase() {
           <img src={keyboardImg} alt="colorful img" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

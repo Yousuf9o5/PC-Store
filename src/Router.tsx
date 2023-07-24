@@ -7,7 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 
 function AppRouter() {
-  const routers = [];
+  // const routers = [];
 
   const router = createBrowserRouter([
     {

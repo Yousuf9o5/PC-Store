@@ -6,7 +6,7 @@ import backgroundImg from "../../assets/imgs/noonite-wavez-mechanical-keyboard 1
 
 function HomeHeader() {
   return (
-    <div className="home-header">
+    <section className="home-header">
       <div className="dark-blue"></div>
       <div className="img-container">
         <img src={backgroundImg} alt="bg" className="bg-img" />
@@ -23,7 +23,7 @@ function HomeHeader() {
           <input type="text" placeholder="Search here..." />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
