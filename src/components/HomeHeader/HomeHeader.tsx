@@ -13,8 +13,8 @@ function HomeHeader() {
       </div>
       <div className="search-section">
         <h1 className="header">
-          From here, the first letter of writing was launched to all parts of
-          the earth
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+          error!
         </h1>
         <div className="search-container">
           <Link to="/" className="search-button">

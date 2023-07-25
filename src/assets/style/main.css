@@ -88,14 +88,12 @@
 
 /* ########## Navbar ########## */
 .app-navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 70px;
   background: transparent;
   font-weight: bold;
   z-index: 99;
+  background: var(--color-dark-blue);
 }
 .app-navbar .nav-container {
   display: flex;
@@ -108,6 +106,14 @@
   width: -moz-fit-content;
   width: fit-content;
   color: var(--color-white);
+  height: 60px;
+  width: 60px;
+}
+.app-navbar .logo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .app-navbar .navigations {
   display: flex;
@@ -121,21 +127,18 @@
   color: var(--color-white);
   width: -moz-fit-content;
   width: fit-content;
+  padding: 5px 1rem;
+  border-radius: 50px;
 }
-.app-navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0%;
-  background: var(--color-white);
-  transition: width 0.3s ease-in-out;
-}
-.app-navbar .nav-link:hover::after {
-  width: 100%;
+.app-navbar .active {
+  background: var(--color-primary);
 }
 
+@media (max-width: 441px) {
+  .app-navbar .navigations {
+    display: none;
+  }
+}
 /* ########## Footer ########## */
 .app-footer {
   background: var(--color-dark-blue);
@@ -284,7 +287,7 @@
   display: flex;
   align-items: center;
   background: var(--color-white);
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 .home-header input {
@@ -318,6 +321,11 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 441px) {
+  .home-header {
+    height: 360px;
+  }
+}
 /* ########## New Items ########## */
 .new-items {
   padding: 2.1rem 2.3rem;
@@ -342,6 +350,7 @@
 @media (max-width: 441px) {
   .new-items .section-header h1 {
     width: 250px;
+    text-align: center;
   }
 }
 /* ########## Navigation Buttons (swiper) ########## */
@@ -373,7 +382,7 @@
   overflow: hidden;
   color: var(--color-dark);
   background: var(--color-white);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .app-card .img-container {
   width: 100%;
@@ -412,7 +421,7 @@
 .app-card button {
   width: 100%;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 2px solid var(--color-primary);
   background: transparent;
   color: var(--color-primary);
@@ -435,13 +444,13 @@
 .section-header h1 {
   font-weight: 300;
   color: var(--color-dark);
-  font-size: var(--font-xxLarge);
+  font-size: var(--font-xLarge);
 }
 .section-header .line {
   width: 20dvw;
   height: 3px;
   background: var(--color-dark);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media (max-width: 441px) {
@@ -473,7 +482,7 @@
 }
 .keyboard-showcase button {
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
   width: 40%;
   padding: 1rem 0rem;
@@ -588,7 +597,7 @@
   border: 2px solid white;
   z-index: 3;
   background: transparent;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .product-type button:hover {
   background: white;
@@ -603,4 +612,63 @@
   .product-type__card {
     scale: 0.9;
   }
+}
+/* ########## Contact ########## */
+.contact-us {
+  width: 100%;
+  background: var(--color-dark);
+  font-size: var(--font-small);
+}
+.contact-us form {
+  width: 100%;
+}
+.contact-us .col-md-6 {
+  padding: 0vw 2vw;
+}
+.contact-us .col-12 {
+  padding: 0vw 2vw;
+}
+.contact-us h1 {
+  color: var(--color-white);
+}
+.contact-us .line {
+  background: var(--color-white);
+}
+.contact-us .inputs {
+  display: grid;
+  gap: 1rem;
+}
+.contact-us input {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 5px;
+  outline: none;
+}
+.contact-us button {
+  width: 150px;
+  height: 41px;
+  background: var(--color-primary);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.contact-us .text-area {
+  display: flex;
+}
+.contact-us textarea {
+  justify-self: flex-end;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  height: 155px;
+}
+.contact-us textarea:focus,
+.contact-us input:focus {
+  border-color: var(--color-primary);
 }/*# sourceMappingURL=main.css.map */
