@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import img from "../../assets/imgs/5ef8fff54e2cb54e4806bc8a6d19417b.jpg";
+import Observer from "../../observer";
 
-function Card() {
+function Card({ delay }: any) {
+  useEffect(() => {
+    Observer("app-card", "translate-card");
+  }, []);
+
   return (
-    <div className="app-card">
+    <div className="app-card" style={{ transitionDelay: `${delay || null}` }}>
       <div className="img-container">
         <img src={img} alt="img" />
       </div>

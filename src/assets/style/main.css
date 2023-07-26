@@ -270,10 +270,15 @@
 }
 .home-header .search-section {
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  transform-origin: top;
+  height: 0px;
+}
+.home-header .show-search {
+  height: 226px;
 }
 .home-header .header {
   color: var(--color-white);
@@ -287,7 +292,7 @@
   display: flex;
   align-items: center;
   background: var(--color-white);
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .home-header input {
@@ -324,11 +329,15 @@
 @media (max-width: 441px) {
   .home-header {
     height: 360px;
+    padding: 0 0.5rem;
+  }
+  .home-header .search-container {
+    scale: 0.9;
   }
 }
 /* ########## New Items ########## */
 .new-items {
-  padding: 2.1rem 2.3rem;
+  padding: 2.1rem 1rem;
   padding-top: 0;
 }
 .new-items .swiper {
@@ -337,8 +346,18 @@
 .new-items .swiper-pagination {
   top: 100% !important;
 }
+.new-items .swiper-pagination-bullet {
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.new-items .swiper-pagination-bullet:hover {
+  background: var(--color-primary);
+}
 .new-items .swiper-pagination-bullet-active {
   background: var(--color-primary);
+  width: 20px;
+  border-radius: 50px;
 }
 .new-items .section-header {
   gap: 2vw;
@@ -348,6 +367,9 @@
 }
 
 @media (max-width: 441px) {
+  .new-items {
+    padding: 2.1rem 1rem;
+  }
   .new-items .section-header h1 {
     width: 250px;
     text-align: center;
@@ -359,7 +381,7 @@
   top: 45%;
   width: 100%;
   z-index: 5;
-  scale: 1.06;
+  scale: 1.02;
 }
 .swiper-buttons button {
   background: transparent;
@@ -383,6 +405,9 @@
   color: var(--color-dark);
   background: var(--color-white);
   border-radius: 5px;
+  transform: translateY(5rem);
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 .app-card .img-container {
   width: 100%;
@@ -433,6 +458,11 @@
   color: white;
 }
 
+.translate-card {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
 /* ########## Section Header ########## */
 .section-header {
   display: flex;
@@ -449,7 +479,7 @@
 .section-header .line {
   width: 20dvw;
   height: 3px;
-  background: var(--color-dark);
+  background: var(--color-gray);
   border-radius: 5px;
 }
 
@@ -460,6 +490,8 @@
 } /* ########## Keyboard Showcase ########## */
 .keyboard-showcase {
   padding: 2.1rem 4vw;
+  transition: opacity 1s ease-in-out 500ms;
+  opacity: 0;
 }
 .keyboard-showcase .col-lg-6 {
   position: relative;
@@ -467,6 +499,15 @@
   place-items: center;
   text-align: center;
   row-gap: 2rem;
+}
+.keyboard-showcase .text-side {
+  transition: all 1s ease-in-out 0.5s;
+  transform: translateY(5rem);
+  opacity: 0;
+}
+.keyboard-showcase .translate-side {
+  transform: translateY(0rem);
+  opacity: 1;
 }
 .keyboard-showcase h1 {
   font-size: var(--font-xxLarge);
@@ -536,6 +577,10 @@
   z-index: 1;
 }
 
+.show-section {
+  opacity: 1;
+}
+
 @media (max-width: 991px) {
   .keyboard-showcase .col-lg-6:nth-last-of-type(1) {
     margin-top: 5rem;
@@ -549,24 +594,29 @@
 /* ########## Product Type ########## */
 .product-type {
   padding: 2.1 0rem;
+  z-index: 99;
 }
 .product-type .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: auto auto;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0 auto;
+  transition: all 1s ease-in-out;
 }
-.product-type__card {
+.product-type .products-card {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 350px;
   display: grid;
   place-items: center;
   overflow: hidden;
   justify-self: center;
+  transition: all 1s ease-in-out;
+  transform: translateY(5rem);
+  opacity: 0;
 }
-.product-type__card:hover img {
+.product-type .products-card:hover img {
   scale: 1.1;
 }
 .product-type img {
@@ -603,14 +653,18 @@
   background: white;
   color: var(--color-dark);
 }
+.product-type .show {
+  transform: translateY(0rem) !important;
+  opacity: 1 !important;
+}
 
 @media (max-width: 441px) {
   .product-type .row {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0rem;
   }
-  .product-type__card {
-    scale: 0.9;
+  .product-type .products-card {
+    margin: 0.5rem 0;
   }
 }
 /* ########## Contact ########## */

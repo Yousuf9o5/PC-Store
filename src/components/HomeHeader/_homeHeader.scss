@@ -38,10 +38,16 @@
 
   .search-section {
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    transform-origin: top;
+    height: 0px;
+  }
+
+  .show-search {
+    height: 226px;
   }
 
   .header {
@@ -57,7 +63,7 @@
     display: flex;
     align-items: center;
     background: var(--color-white);
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
   }
 
@@ -99,5 +105,10 @@
 @media (max-width: 441px) {
   .home-header {
     height: 360px;
+    padding: 0 0.5rem;
+
+    .search-container {
+      scale: 0.9;
+    }
   }
 }

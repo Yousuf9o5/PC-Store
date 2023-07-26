@@ -40,9 +40,8 @@ function NewItems() {
 
       <Swiper
         modules={[Pagination, A11y]}
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={carouselSize()}
-        // navigation={true}
         pagination={{ clickable: true }}
         loop={true}
       >

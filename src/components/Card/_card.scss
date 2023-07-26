@@ -7,6 +7,9 @@
   color: var(--color-dark);
   background: var(--color-white);
   border-radius: 5px;
+  transform: translateY(5rem);
+  opacity: 0;
+  transition: all 1s ease-in-out;
 
   .img-container {
     width: 100%;
@@ -62,4 +65,9 @@
       color: white;
     }
   }
+}
+
+.translate-card {
+  opacity: 1;
+  transform: translateY(0rem);
 }

@@ -1,10 +1,14 @@
-// import React from 'react'
-
 import { Link } from "react-router-dom";
 import LightSearch from "../../assets/icons/search.svg";
 import backgroundImg from "../../assets/imgs/noonite-wavez-mechanical-keyboard 1.png";
+import { useEffect } from "react";
+import Observer from "../../observer";
 
 function HomeHeader() {
+  useEffect(() => {
+    Observer("search-section", "show-search");
+  }, []);
+
   return (
     <section className="home-header">
       <div className="dark-blue"></div>
