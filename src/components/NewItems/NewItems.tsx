@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 function NewItems() {
   const [scrWidth, setScrWidth] = useState<number>(window.innerWidth);
-  const [data, setData] = useState<number[]>([1, 2, 3, 4, 5, 6]);
+  const [data, _] = useState<number[]>([1, 2, 3, 4, 5, 6]);
 
   useEffect(() => {
     const screenSize = (): void => {
