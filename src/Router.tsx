@@ -1,11 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, lazy } from "react";
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
 import App from "./App";
-import Home from "./pages/Home";
+// fast
+// import Home from "./pages/Home";
+// slow
+const Home = lazy(() => import("./pages/Home"));
 
 function ScrollToTop({ children }: any): JSX.Element {
   useEffect(() => {
@@ -29,7 +32,7 @@ function AppRouter() {
       path: "/a",
       element: (
         <ScrollToTop>
-          <h1>Hello a</h1>
+          <h1 style={{ height: "100rem" }}>A</h1>
         </ScrollToTop>
       ),
     },
@@ -37,7 +40,7 @@ function AppRouter() {
       path: "/b",
       element: (
         <ScrollToTop>
-          <h1>Hello b</h1>
+          <h1 style={{ height: "100rem" }}>B</h1>
         </ScrollToTop>
       ),
     },

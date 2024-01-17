@@ -1,8 +1,13 @@
-// import React from "react";
-
+import { MouseEvent } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 function Contact() {
+  const submit = (e: MouseEvent) => {
+    console.log("Button clicked!");
+    e.preventDefault();
+    alert("Submitted");
+  };
+
   return (
     <div className="contact-us py-5">
       <SectionHeader title={"Contact us"} />
@@ -17,7 +22,7 @@ function Contact() {
             <textarea placeholder="Message"></textarea>
           </div>
           <div className="col-12 mt-3">
-            <button>Send</button>
+            <button onClick={submit}>Send</button>
           </div>
         </div>
       </form>
